@@ -141,17 +141,16 @@ function Dark_Mode(){
             
     
             "</style>"
+            photo.src = "black_photo.png";
         }
         else{
             darkMode.innerHTML =
             "<style>"+
             ""+
-            "</style>"
+            "</style>"; 
+            photo.src = "black_photo.png";
         }
         },300)
-    
-
-
 }
 
 
