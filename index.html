@@ -81,26 +81,27 @@
 
                             setTimeout(function(){
                                 window.image.src = "black_photo.png";
-                                x.style.transition = '1000ms';
                                 setTimeout(function(){
+                                x.style.transition = '1000ms';
                                 x.style.opacity = 1;
-                                },1000)
-                            },300)
+                                },1100)
+                            },100)
                             window.logo_header.src = "logo_black.png";
 
 
                         }else{
 
-                            x.style.transition = '400ms' ;
+                            x.style.transition = '50ms' ;
                             x.style.opacity = 0;
 
                             setTimeout(function(){
                                 window.image.src = "white_new.png";
-                                x.style.transition = '1300ms' ;
+                                
                                 setTimeout(function(){
+                                x.style.transition = '1000ms' ;
                                 x.style.opacity = 1;
-                                },500)
-                            },700)
+                                },1100)
+                            },100)
                             window.logo_header.src = "logo_white.png";
                         }
                     
