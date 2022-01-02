@@ -148,7 +148,7 @@ function Dark_Mode(){
             "<style>"+
             ""+
             "</style>"; 
-            photo.src = "black_photo.png";
+            photo.src = "white_new.png";
         }
         },300)
 }
