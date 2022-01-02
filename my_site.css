@@ -3,6 +3,7 @@ body{
     margin: 0px;
     place-items: center;
     transition: 1s background-color;
+    backgeound: none ;
 }
 .help{
     display: none;
