@@ -65,22 +65,21 @@
 
 
                 <label class="label">
-                    <input type="checkbox" class="input" id="dark_mode" onclick="/* ChangePhoto(); */Dark_Mode()">
+                    <input type="checkbox" class="input" id="dark_mode" onclick="ChangePhoto();Dark_Mode()">
                     <span class="slider round">  
                     </span>
                 </label>
 
 
-
-               <!--  <script>
+<!-- 
+                <script>
 
 
 
                     function ChangePhoto(){
                         let x = document.getElementById("image");
                         if (document.getElementById("dark_mode").checked == 1) {
-
-                            x.style.transition = '50ms' ;
+                            x.style.transition = '0ms' ;
                             x.style.opacity = 0;
 
                             setTimeout(function(){
@@ -89,13 +88,13 @@
                                 x.style.transition = '1000ms';
                                 x.style.opacity = 1;
                                 },1100)
-                            },100)
+                            },90)
                             window.logo_header.src = "logo_black.png";
 
 
                         }else{
 
-                            x.style.transition = '50ms' ;
+                            x.style.transition = '0ms' ;
                             x.style.opacity = 0;
 
                             setTimeout(function(){
