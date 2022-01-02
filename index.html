@@ -78,10 +78,9 @@
 
                     function ChangePhoto(){
                         let x = document.getElementById("image");
+                        x.style.transition = '0ms' ;
+                        x.style.opacity = 0;
                         if (document.getElementById("dark_mode").checked == 1) {
-                            x.style.transition = '0ms' ;
-                            x.style.opacity = 0;
-
                             setTimeout(function(){
                                 window.image.src = "black_photo.png";
                                 setTimeout(function(){
@@ -90,8 +89,6 @@
                                 },1100)
                             },90)
                             window.logo_header.src = "logo_black.png";
-
-
                         }else{
 
                             x.style.transition = '0ms' ;
