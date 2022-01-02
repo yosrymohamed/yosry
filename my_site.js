@@ -14,6 +14,47 @@ let
 
 
 
+
+
+
+function ChangePhoto(){
+    let x = document.getElementById("image");
+    if (document.getElementById("dark_mode").checked == 1) {
+        x.style.transition = '0ms' ;
+        x.style.opacity = 0;
+
+        setTimeout(function(){
+            window.image.src = "black_photo.png";
+            setTimeout(function(){
+            x.style.transition = '1000ms';
+            x.style.opacity = 1;
+            },1100)
+        },90)
+        window.logo_header.src = "logo_black.png";
+
+
+    }else{
+
+        x.style.transition = '0ms' ;
+        x.style.opacity = 0;
+
+        setTimeout(function(){
+            window.image.src = "white_new.png";
+                
+            setTimeout(function(){
+            x.style.transition = '1000ms' ;
+            x.style.opacity = 1;
+            },1100)
+        },100)
+        window.logo_header.src = "logo_white.png";
+    }
+    
+}
+
+
+
+
+
 function Dark_Mode(){
     setTimeout(function (){
         if (darkMode.checked == 1) {
@@ -141,17 +182,18 @@ function Dark_Mode(){
             
     
             "</style>"
-            photo.src = "black_photo.png";
         }
         else{
             darkMode.innerHTML =
             "<style>"+
             ""+
             "</style>"; 
-            photo.src = "white_new.png";
         }
         },300)
 }
+
+
+
 
 
 function my_work() {
