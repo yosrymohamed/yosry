@@ -17,7 +17,7 @@ let
 
 
 
-function ChangePhoto(){
+/* function ChangePhoto(){
     let x = document.getElementById("image");
     if (document.getElementById("dark_mode").checked == 1) {
         x.style.transition = '0ms' ;
@@ -49,7 +49,7 @@ function ChangePhoto(){
         window.logo_header.src = "logo_white.png";
     }
     
-}
+} */
 
 
 
