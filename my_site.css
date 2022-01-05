@@ -153,6 +153,7 @@ nav a:hover::before{
     font-family: sans-serif;
     line-height: 40px;
     transition: 0.5s all;
+    cursor: pointer;
 }
 .sm_bar a:hover{
     color: rgba(8, 0, 255, 0.945);
