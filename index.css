@@ -1,0 +1,1236 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* container */
+
+.container {
+    display: grid;
+    grid-template-areas: "he he he he he he" "txt txt txt ph ph ph" "num num num num num num" "Twork Twork Twork Twork Twork Twork" "Mwork Mwork Mwork Mwork Mwork Mwork" "Twith Twith Twith Twith Twith Twith" "Wwith Wwith Wwith Wwith Wwith Wwith";
+    grid-auto-rows: minmax(40px, auto);
+    grid-row-gap: 100px;
+    text-align: center;
+    justify-items: center;
+}
+
+.container .header {
+    grid-area: he;
+    width: 100%;
+}
+
+.container .text {
+    grid-area: txt;
+    width: 80%;
+}
+
+.container .photo {
+    grid-area: ph;
+}
+
+.container .number {
+    grid-area: num;
+}
+
+.container .title_my_work {
+    grid-area: Twork;
+}
+
+.container .my_work {
+    grid-area: Mwork;
+}
+
+.container .title_work_with {
+    grid-area: Twith;
+}
+
+.container .work_with {
+    grid-area: Wwith;
+}
+
+
+/* end container */
+
+
+/* header  */
+
+header {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 -12px 15px 1px black;
+    width: 100%;
+}
+
+header ul {
+    list-style: none;
+    margin: 10px;
+}
+
+header ul li {
+    display: inline;
+    font-family: serif;
+    padding: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    position: relative;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+header ul li a::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 0;
+    bottom: 25px;
+    left: 0;
+    height: 4px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+header ul li a:hover {
+    letter-spacing: 5px;
+}
+
+header ul li a:hover::before {
+    width: 100%;
+}
+
+header ul li .before_a::before {
+    background-color: white;
+}
+
+
+/* end header */
+
+
+/* text area */
+
+.text {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    color: black;
+    flex-direction: column;
+}
+
+.text h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: 500;
+}
+
+.text h4 {
+    text-align: center;
+    font-size: 35px;
+    font-family: Arial Black;
+    font-weight: 1000;
+}
+
+.text p {
+    text-align: center;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-weight: 100;
+}
+
+
+/* end text area */
+
+
+/* my photo */
+
+.photo {
+    width: 60%;
+}
+
+.photo img {
+    width: 100%;
+    background-image: url("white_photo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 70px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+
+/* end my photo */
+
+
+/* btn my number  */
+
+.number {
+    display: flex;
+    justify-content: center;
+    /* night mode */
+}
+
+.number .my_num {
+    position: relative;
+    margin: 90px;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    padding: 0.25em 1em;
+    border: black solid 4px;
+    border-radius: 0.35em;
+    text-shadow: 0 0 10px white, 0 0 30px black, 0 0 30px black;
+    box-shadow: 0 0 15px 2px black inset, 0 0 20px 13px black;
+    font-weight: 600;
+    transition: background-color 100ms linear;
+    animation: light_my_num 4s infinite;
+    cursor: pointer;
+    -webkit-border-radius: 0.35em;
+    -moz-border-radius: 0.35em;
+    -ms-border-radius: 0.35em;
+    -o-border-radius: 0.35em;
+    -webkit-transition: background-color 100ms linear;
+    -moz-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    -o-transition: background-color 100ms linear;
+    -webkit-animation: light_my_num 4s infinite;
+}
+
+.number .my_num::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background-color: black;
+    top: 130%;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(20deg) scale(1, 0.65);
+    filter: blur(20px);
+    opacity: 0.7;
+    -webkit-transform: perspective(1em) rotateX(20deg) scale(1, 0.65);
+    -moz-transform: perspective(1em) rotateX(20deg) scale(1, 0.65);
+    -ms-transform: perspective(1em) rotateX(20deg) scale(1, 0.65);
+    -o-transform: perspective(1em) rotateX(20deg) scale(1, 0.65);
+    -webkit-filter: blur(20px);
+}
+
+.number .my_num:hover::before {
+    filter: blur(16px);
+    -webkit-filter: blur(16px);
+}
+
+.number .my_num:hover {
+    border-radius: 0.35em;
+    background-color: black;
+    color: white;
+    text-shadow: none;
+    font-weight: 500;
+    font-family: fantasy;
+    -webkit-animation: none;
+    animation: none;
+    -webkit-border-radius: 0.35em;
+    -moz-border-radius: 0.35em;
+    -ms-border-radius: 0.35em;
+    -o-border-radius: 0.35em;
+}
+
+.number .my_num::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0 0 50px 20px black;
+    transition: 100ms;
+    opacity: 0;
+    -webkit-transition: 100ms;
+    -moz-transition: 100ms;
+    -ms-transition: 100ms;
+    -o-transition: 100ms;
+}
+
+.number .my_num:hover::after {
+    opacity: 1;
+}
+
+.number .my_num2 {
+    position: relative;
+    margin: 90px;
+    text-decoration: none;
+    color: #e43dc0;
+    padding: 0.25em 1em;
+    border: #e43dc0 solid 4px;
+    border-radius: 0.35em;
+    text-shadow: 0 0 8px white, 0 0 20px #e43dc0, 0 0 30px #e43dc0;
+    box-shadow: 0 0 15px 2px #e43dc0 inset, 0 0 20px 13px #e43dc0;
+    font-weight: 600;
+    transition: background-color 100ms linear;
+    animation: light_my_num2 4s infinite;
+    cursor: pointer;
+    -webkit-border-radius: 0.35em;
+    -moz-border-radius: 0.35em;
+    -ms-border-radius: 0.35em;
+    -o-border-radius: 0.35em;
+    -webkit-transition: background-color 100ms linear;
+    -moz-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    -o-transition: background-color 100ms linear;
+    -webkit-animation: light_my_num2 4s infinite;
+    letter-spacing: 1px;
+}
+
+.number .my_num2::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background-color: #e43dc0;
+    top: 130%;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(20deg) scale(1, 0.65);
+    filter: blur(20px);
+    opacity: 0.7;
+    -webkit-transform: perspective(1em) rotateX(20deg) scale(1, 0.65);
+    -moz-transform: perspective(1em) rotateX(20deg) scale(1, 0.65);
+    -ms-transform: perspective(1em) rotateX(20deg) scale(1, 0.65);
+    -o-transform: perspective(1em) rotateX(20deg) scale(1, 0.65);
+    -webkit-filter: blur(20px);
+}
+
+.number .my_num2:hover::before {
+    filter: blur(16px);
+    -webkit-filter: blur(16px);
+}
+
+.number .my_num2:hover {
+    border-radius: 0.35em;
+    background-color: #e43dc0;
+    color: white;
+    text-shadow: none;
+    font-weight: 500;
+    font-family: fantasy;
+    -webkit-animation: none;
+    animation: none;
+    -webkit-border-radius: 0.35em;
+    -moz-border-radius: 0.35em;
+    -ms-border-radius: 0.35em;
+    -o-border-radius: 0.35em;
+}
+
+.number .my_num2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0 0 50px 20px #e43dc0;
+    transition: 100ms;
+    opacity: 0;
+    -webkit-transition: 100ms;
+    -moz-transition: 100ms;
+    -ms-transition: 100ms;
+    -o-transition: 100ms;
+}
+
+.number .my_num2:hover::after {
+    opacity: 1;
+}
+
+@-webkit-keyframes light_my_num {
+    0% {
+        background-color: white;
+    }
+    3% {
+        background-color: black;
+    }
+    6% {
+        background-color: white;
+    }
+    8% {
+        background-color: black;
+    }
+    9% {
+        background-color: black;
+    }
+}
+
+@keyframes light_my_num {
+    0% {
+        background-color: white;
+    }
+    3% {
+        background-color: black;
+    }
+    6% {
+        background-color: white;
+    }
+    8% {
+        background-color: black;
+    }
+    9% {
+        background-color: black;
+    }
+}
+
+@-webkit-keyframes light_my_num2 {
+    0% {
+        background-color: white;
+    }
+    3% {
+        background-color: #e43dc0;
+    }
+    6% {
+        background-color: white;
+    }
+    8% {
+        background-color: #e43dc0;
+    }
+    9% {
+        background-color: white;
+    }
+}
+
+@keyframes light_my_num2 {
+    0% {
+        background-color: white;
+    }
+    3% {
+        background-color: #e43dc0;
+    }
+    6% {
+        background-color: white;
+    }
+    8% {
+        background-color: #e43dc0;
+    }
+    9% {
+        background-color: white;
+    }
+}
+
+
+/* end btn my number */
+
+
+/* title my work */
+
+.title_my_work {
+    position: relative;
+}
+
+.title_my_work h2 {
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+    font-family: Arial black, Helvetica, sans-serif;
+}
+
+.title_my_work h4 {
+    text-align: center;
+    margin: 20px;
+    font-size: 17px;
+}
+
+
+/* end title  */
+
+
+/*  my work  */
+
+.my_work {
+    padding: 8px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.my_work video,
+.my_work img {
+    width: 400px;
+    transition: 0.8s;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.my_work video:hover,
+.my_work img:hover {
+    transform: perspective(250px) rotateZ(0.9deg) rotatex(2.8deg);
+    -webkit-transform: perspective(250px) rotateZ(0.9deg) rotatex(2.8deg);
+    -moz-transform: perspective(250px) rotateZ(0.9deg) rotatex(2.8deg);
+    -ms-transform: perspective(250px) rotateZ(0.9deg) rotatex(2.8deg);
+    -o-transform: perspective(250px) rotateZ(0.9deg) rotatex(2.8deg);
+}
+
+
+/* end my work */
+
+
+/* title skills */
+
+.title_work_with {
+    position: relative;
+}
+
+.title_work_with h2 {
+    text-align: center;
+    font-family: Arial black, Helvetica, sans-serif;
+    font-size: 30px;
+    margin: 20px;
+}
+
+.title_work_with h4 {
+    text-align: center;
+    font-size: 17px;
+    margin: 10px;
+}
+
+
+/* end title skills */
+
+
+/* skills */
+
+.work_with {
+    padding: 60px;
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-row-gap: 60px;
+    animation: 6s infinite;
+    -webkit-animation: 6s infinite;
+    text-align: start;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+@-webkit-keyframes move_ {
+    50% {
+        padding: 40px;
+    }
+}
+
+@keyframes move_ {
+    50% {
+        padding: 40px;
+    }
+}
+
+.work_with:hover {
+    animation: none;
+    -webkit-animation: none;
+}
+
+.work_with img,
+.work_with video {
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    z-index: 100;
+    transition: 0.8s;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.work_with div {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 6px 6px 8px 0.5px black;
+    z-index: 200;
+    transition: 0.6s width;
+}
+
+.work_with div:hover {
+    width: 260px;
+    background-color: rgba(0, 0, 0, 0.781);
+}
+
+.work_with div::after {
+    content: attr(data-text) "";
+    position: absolute;
+    color: white;
+    right: 0px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 700;
+    top: 45%;
+    right: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+.work_with div:hover::after {
+    opacity: 1;
+}
+
+.work_with .background_white:hover {
+    background-color: white;
+}
+
+.work_with .background_white::after {
+    color: black;
+}
+
+
+/* end skills */
+
+
+/* night mode  */
+
+.night_mode {
+    position: absolute;
+    bottom: 200px;
+    left: 0px;
+    width: 70px;
+    height: 15px;
+}
+
+.night_mode main {
+    padding: 10px 0px 0px 0px;
+}
+
+.night_mode .l {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 90px;
+    height: 2.5em;
+    padding: 0.15em;
+    color: #fdea7b;
+    margin: auto;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 0.75em;
+    transition: background-color 0.1s 0.3s ease-out, box-shadow 0.1s 0.3s ease-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-transition: background-color 0.1s 0.3s ease-out, box-shadow 0.1s 0.3s ease-out;
+    -moz-transition: background-color 0.1s 0.3s ease-out, box-shadow 0.1s 0.3s ease-out;
+    -ms-transition: background-color 0.1s 0.3s ease-out, box-shadow 0.1s 0.3s ease-out;
+    -o-transition: background-color 0.1s 0.3s ease-out, box-shadow 0.1s 0.3s ease-out;
+    -webkit-border-radius: 0.75em;
+    -moz-border-radius: 0.75em;
+    -ms-border-radius: 0.75em;
+    -o-border-radius: 0.75em;
+    box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.3) inset;
+}
+
+.night_mode .l:before,
+.night_mode .l:after {
+    content: "";
+    display: block;
+}
+
+.night_mode .l:before {
+    background-color: #d7d7d7;
+    border-radius: 50%;
+    width: 2.2em;
+    height: 2.2em;
+    transition: background-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+    z-index: 1;
+    -webkit-transition: background-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+    -moz-transition: background-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+    -ms-transition: background-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+    -o-transition: background-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.night_mode .l:after {
+    background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.15) 0) 0 50%/50% 100%, repeating-linear-gradient(90deg, #bbb 0, #bbb, #bbb 20%, #999 20%, #999 40%) 0 50%/50% 100%, radial-gradient(circle at 50% 50%, #888 25%, transparent 26%);
+    background-repeat: no-repeat;
+    border: 0.25em solid transparent;
+    border-left: 0.4em solid #d8d8d8;
+    border-right: 0 solid transparent;
+    transition: border-left-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+    transform: translateX(-22.5%);
+    transform-origin: 25% 50%;
+    width: 1.2em;
+    height: 1em;
+}
+
+.night_mode .l:checked {
+    background-color: rgba(0, 0, 0, 0.45);
+    box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.1) inset;
+}
+
+.night_mode .l:checked:before {
+    background-color: currentColor;
+    transform: translateX(55px);
+    -webkit-transform: translateX(55px);
+    -moz-transform: translateX(55px);
+    -ms-transform: translateX(55px);
+    -o-transform: translateX(55px);
+}
+
+.night_mode .l:checked:after {
+    border-left-color: currentColor;
+    transform: translateX(19.2px) rotateY(180deg);
+    -webkit-transform: translateX(19.2px) rotateY(180deg);
+    -moz-transform: translateX(19.2px) rotateY(180deg);
+    -ms-transform: translateX(19.2px) rotateY(180deg);
+    -o-transform: translateX(19.2px) rotateY(180deg);
+}
+
+.night_mode .l:focus {
+    /* Usually an anti-A11Y practice but set to remove an annoyance just for this demo */
+    outline: 0;
+}
+
+
+/* end night mode  */
+
+
+/*  btn social media */
+
+.social_media {
+    position: absolute;
+    top: 55%;
+    left: 190px;
+    font-size: 45px;
+    display: flex;
+    width: 50px;
+    text-decoration: none;
+    flex-flow: row;
+    justify-content: space-between;
+    opacity: 0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.social_media a {
+    color: rgb(255, 235, 235);
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.social_media a:hover {
+    font-size: 50px;
+}
+
+
+/* end btn SM */
+
+
+/* some change by java script */
+
+.background {
+    background-color: black;
+}
+
+.top {
+    position: fixed;
+    bottom: 10px;
+    right: 8px;
+    background-color: black;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: serif;
+    padding: 7px;
+    border-radius: 20%;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+    display: none;
+    cursor: pointer;
+}
+
+
+/* end this  */
+
+
+/*   S phone  */
+
+@media screen and (max-width: 320px) {
+    header ul li {
+        padding: 5px;
+    }
+    .header a {
+        font-size: 15px;
+    }
+    .container {
+        grid-template-areas: "he he he he he he" "txt txt txt txt txt txt" "ph ph ph ph ph ph" "num num num num num num" "Twork Twork Twork Twork Twork Twork" "Mwork Mwork Mwork Mwork Mwork Mwork" "Twith Twith Twith Twith Twith Twith" "Wwith Wwith Wwith Wwith Wwith Wwith";
+        grid-row-gap: 50px;
+    }
+    .work_with {
+        flex-flow: column wrap;
+        text-align: start;
+        grid-template-columns: repeat(1, 1fr);
+        width: 60%;
+        justify-items: start;
+    }
+    .my_work img,
+    .my_work video {
+        margin-bottom: 30px;
+    }
+    .text {
+        width: 90%;
+        margin-bottom: 0px;
+    }
+    .photo {
+        margin-bottom: 50px;
+    }
+    .text h2 {
+        font-size: 20px;
+    }
+    .text h4 {
+        font-size: 25px;
+    }
+    .text p {
+        font-size: 15px;
+    }
+    .number {
+        width: 90%;
+    }
+    .my_work {
+        width: 90%;
+    }
+    .number .my_num {
+        font-size: 20px;
+    }
+    .photo img {
+        bottom: 0px;
+    }
+    .night_mode {
+        left: 0px;
+        top: 300px;
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+    }
+    header ul li a:hover {
+        letter-spacing: 0px;
+    }
+    .social_media {
+        flex-flow: column;
+        font-size: 20px;
+        text-align: center;
+        justify-items: center;
+        left: 0px;
+        top: 70%;
+    }
+    .social_media a:hover {
+        font-size: 20px;
+    }
+    .my_work video,
+    .my_work img {
+        width: 90%;
+    }
+    .title_my_work h2 {
+        font-size: 20px;
+    }
+    .title_my_work h4 {
+        font-size: 10px;
+    }
+    .title_work_with h2 {
+        font-size: 20px;
+    }
+    .title_work_with h4 {
+        font-size: 10px;
+    }
+    .work_with video,
+    .work_with img {
+        width: 120px;
+    }
+    .work_with div {
+        width: 120px;
+    }
+    .work_with div:hover {
+        width: 220px;
+    }
+    .work_with div::after {
+        font-size: 15px;
+    }
+}
+
+
+/*  L phone  */
+
+@media screen and (min-width: 320px) and (max-width: 426px) {
+    header ul li {
+        padding: 5px;
+    }
+    .header a {
+        font-size: 15px;
+    }
+    .container {
+        grid-template-areas: "he he he he he he" "txt txt txt txt txt txt" "ph ph ph ph ph ph" "num num num num num num" "Twork Twork Twork Twork Twork Twork" "Mwork Mwork Mwork Mwork Mwork Mwork" "Twith Twith Twith Twith Twith Twith" "Wwith Wwith Wwith Wwith Wwith Wwith";
+        grid-row-gap: 50px;
+    }
+    .work_with {
+        flex-flow: column wrap;
+        text-align: start;
+        grid-template-columns: repeat(1, 1fr);
+        width: 60%;
+        justify-items: start;
+    }
+    .my_work img,
+    .my_work video {
+        margin-bottom: 30px;
+    }
+    .text {
+        width: 90%;
+        margin-bottom: 0px;
+    }
+    .photo {
+        margin-bottom: 50px;
+    }
+    .text h2 {
+        font-size: 20px;
+    }
+    .text h4 {
+        font-size: 25px;
+    }
+    .text p {
+        font-size: 15px;
+    }
+    .number {
+        width: 90%;
+    }
+    .my_work {
+        width: 90%;
+    }
+    .number .my_num {
+        font-size: 20px;
+    }
+    .photo img {
+        bottom: 0px;
+    }
+    .night_mode {
+        left: 0px;
+        top: 300px;
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+    }
+    header ul li a:hover {
+        letter-spacing: 0px;
+    }
+    .social_media {
+        flex-flow: column;
+        font-size: 20px;
+        text-align: center;
+        justify-items: center;
+        left: 0px;
+        top: 70%;
+    }
+    .social_media a:hover {
+        font-size: 20px;
+    }
+    .my_work video,
+    .my_work img {
+        width: 90%;
+    }
+    .title_my_work h2 {
+        font-size: 20px;
+    }
+    .title_my_work h4 {
+        font-size: 10px;
+    }
+    .title_work_with h2 {
+        font-size: 20px;
+    }
+    .title_work_with h4 {
+        font-size: 10px;
+    }
+    .work_with video,
+    .work_with img {
+        width: 120px;
+    }
+    .work_with div {
+        width: 120px;
+    }
+    .work_with div:hover {
+        width: 220px;
+    }
+    .work_with div::after {
+        font-size: 15px;
+    }
+}
+
+
+/*  tablet   */
+
+@media screen and (min-width: 426px) and (max-width: 769px) {
+    .header a {
+        font-size: 20px;
+    }
+    header ul li {
+        padding: 10px;
+    }
+    .container {
+        grid-template-areas: "he he he he he he" "txt txt txt txt txt txt" "ph ph ph ph ph ph" "num num num num num num" "Twork Twork Twork Twork Twork Twork" "Mwork Mwork Mwork Mwork Mwork Mwork" "Twith Twith Twith Twith Twith Twith" "Wwith Wwith Wwith Wwith Wwith Wwith";
+        grid-row-gap: 10px;
+    }
+    .work_with {
+        flex-flow: column wrap;
+        text-align: start;
+        grid-template-columns: repeat(2, 1fr);
+        width: 60%;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    .my_work img,
+    .my_work video {
+        margin-bottom: 30px;
+    }
+    .text {
+        margin-bottom: 0px;
+        margin-top: 30px;
+    }
+    .photo {
+        margin-bottom: 50px;
+        width: 40%;
+    }
+    .text h2 {
+        font-size: 25px;
+    }
+    .text h4 {
+        font-size: 30px;
+    }
+    .text p {
+        font-size: 10px;
+    }
+    .number {
+        width: 90%;
+    }
+    .my_work {
+        width: 90%;
+    }
+    .number .my_num {
+        font-size: 20px;
+    }
+    .photo img {
+        bottom: 0px;
+    }
+    .night_mode {
+        left: 10px;
+        top: 300px;
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+    }
+    .social_media {
+        flex-flow: column;
+        font-size: 35px;
+        text-align: center;
+        justify-items: center;
+        left: 0px;
+        top: 70%;
+    }
+    .social_media a:hover {
+        font-size: 40px;
+    }
+    .my_work video,
+    .my_work img {
+        width: 70%;
+    }
+    .work_with video,
+    .work_with img {
+        width: 120px;
+    }
+    .work_with div {
+        width: 120px;
+    }
+    .work_with div:hover {
+        width: 220px;
+    }
+    .work_with div::after {
+        font-size: 15px;
+    }
+}
+
+
+/*  S laptop   */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    header a {
+        font-size: 25px;
+    }
+    .work_with {
+        flex-flow: column wrap;
+        text-align: start;
+        grid-template-columns: repeat(3, 1fr);
+        width: 60%;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    .my_work img,
+    .my_work video {
+        margin-bottom: 30px;
+    }
+    .photo {
+        margin-bottom: 50px;
+    }
+    .number {
+        width: 90%;
+    }
+    .photo {
+        width: 70%;
+    }
+    .my_work {
+        width: 50%;
+    }
+    .number .my_num {
+        font-size: 20px;
+    }
+    .night_mode {
+        left: 10px;
+        top: 300px;
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+    }
+    header ul li a:hover {
+        letter-spacing: 0px;
+    }
+    .social_media {
+        flex-flow: column;
+        font-size: 35px;
+        text-align: center;
+        justify-items: center;
+        left: 0px;
+        top: 70%;
+    }
+    .social_media a:hover {
+        font-size: 40px;
+    }
+    .my_work video,
+    .my_work img {
+        width: 90%;
+    }
+    .work_with video,
+    .work_with img {
+        width: 120px;
+    }
+    .work_with div {
+        width: 120px;
+    }
+    .work_with div:hover {
+        width: 220px;
+    }
+    .work_with div::after {
+        font-size: 15px;
+    }
+}
+
+
+/*  S laptop  */
+
+@media screen and (min-width: 1025px) and (max-width: 1441px) {
+    .my_work img,
+    .my_work video {
+        margin-bottom: 30px;
+    }
+    .photo {
+        margin-bottom: 50px;
+    }
+    .number .my_num {
+        font-size: 20px;
+    }
+    .night_mode {
+        left: 10px;
+        top: 300px;
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+    }
+    .social_media {
+        flex-flow: column;
+        font-size: 35px;
+        text-align: center;
+        justify-items: center;
+        left: 0px;
+        top: 70%;
+    }
+    .social_media a:hover {
+        font-size: 40px;
+    }
+}
+
+
+/* L laptop */
+
+@media screen and (min-width: 1441px) and (max-width: 2561px) {
+    .night_mode {
+        left: 10px;
+        top: 300px;
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+    }
+    .social_media {
+        flex-flow: column;
+        font-size: 35px;
+        text-align: center;
+        justify-items: center;
+        left: 0px;
+        top: 70%;
+    }
+    .social_media a:hover {
+        font-size: 40px;
+    }
+}
